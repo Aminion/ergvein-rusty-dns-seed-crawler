@@ -1,0 +1,30 @@
+[package]
+name = "ergvein-rusty-dns-seed-crawler"
+version = "0.1.0"
+authors = ["Aminion <aminion@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+byteorder = "1"
+bytes = "1"
+chrono = "^0.4"
+clap = "2.33.3"
+dashmap = "4.0"
+ergvein-protocol = { git = "https://github.com/ncrashed/ergvein-protocol", rev = "58fcfc7711f23ff0d787002ae075618c6b33b649" }
+fs2 = "0.4.3"
+futures = "0.3"
+hex = "0.4"
+lazy_static = "1.4.0"
+rand = "0.8.3"
+reqwest = { version = "0.11.2", features = [ "json" ] }
+rocksdb = "0.16.0"
+serde = { version = "1.0.124", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+tokio-util = { version = "0.6", features = [ "codec" ] }
+warp = "0.3.1"
+
+# [profile.release]
+# debug = 1
