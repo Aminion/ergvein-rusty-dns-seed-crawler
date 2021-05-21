@@ -19,7 +19,6 @@ impl Decoder for MessageCodec {
     type Error = ergvein_protocol::message::Error;
 
     fn decode(&mut self, buf: &mut BytesMut) -> Result<Option<Message>, Error> {
-        println!("Failed to read from socket; error={}", String::from("x"));
         if !buf.is_empty() {
             match deserialize_partial::<Message>(buf) {
                 Err(Error::Io(ref err)) if err.kind() == io::ErrorKind::UnexpectedEof => Ok(None),
