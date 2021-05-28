@@ -26,6 +26,7 @@ tokio-stream = "0.1"
 tokio-util = { version = "0.6", features = [ "codec" ] }
 warp = "0.3.1"
 trust-dns-server = "0.20.2"
+trust-dns-client = "0.20.3"
 
 # [profile.release]
 # debug = 1
